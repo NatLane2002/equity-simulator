@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equity Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Equity Simulator</h1>
+
+    <div class="toggle-container">
+      <label for="compoundingToggle">Compounding: <input type="checkbox" id="compoundingToggle" ></label>
+      <br>
+    </div>
+
+    <div class="input-section">
+      <label for="numTrades">Number of Trades:</label>
+      <input type="number" id="numTrades" max="10000" placeholder="Enter number of trades" value="100" required>
+    
+      <label for="winRate">Win Rate (%):</label>
+      <input type="number" id="winRate" max="100" placeholder="Enter win rate (%)" required>
+    
+      <label for="rrRatio">Reward-to-Risk Ratio:</label>
+      <input type="number" id="rrRatio" step="0.01" placeholder="Enter reward-to-risk ratio" required>
+    
+      <label for="riskPerTrade">Risk per Trade (%):</label>
+      <input type="number" id="riskPerTrade" max="100" step="0.1" placeholder="Enter risk per trade (%)" value="0.5" required>
+    
+      <label for="initialBalance">Initial Balance ($):</label>
+      <input type="number" id="initialBalance" step="50000" placeholder="Enter initial balance" value="50000" required>
+    </div>
+
+    <button id="runSimulation">Run Simulation</button>
+
+    <h6 class="refreshMessage">The website will refresh after every 8 simulations to save memory</h6>
+
+    <div class="output-section">
+      <h2>Simulation Results</h2>
+      <p>Total Return: <span id="totalReturn">-</span>%</p>
+      <p>Final Balance: $<span id="finalBalance">-</span></p>
+      <hr class="shortHr">
+      <p>Max Drawdown: <span id="maxDrawdown">-</span>%</p>
+      <p>Average Gain per Trade: <span id="avgGainPerTrade">-</span>%</p>
+      <hr class="shortHr">
+      <p>Max Winning Streak: <span id="maxWinningStreak">-</span></p>
+      <p>Max Losing Streak: <span id="maxLosingStreak">-</span></p>
+      <hr class="shortHr">
+      <p>Number of Winners: <span id="numWinners">-</span></p>
+      <p>Number of Losers: <span id="numLosers">-</span></p>
+      <p>Actual Win Rate: <span id="actualWinRate">-</span>%</p>
+    </div>
+
+    <div class="chart-container" style="display: none;">
+      <canvas id="equityCurve"></canvas>
+    </div>
+    <br>
+    <button id="resetButton">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

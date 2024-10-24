@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #4574a0;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="number"] {
+    width: 98%;
+    padding: 8px;
+    /* padding-right: 0px; */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  /* Phone Screen */
+  @media screen and (max-width: 600px) {
+    input[type="number"] {
+      width: 96%;
+    }
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5892c9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #4574a0;
+  }
+  
+  #results {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  canvas {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+  
+  .shortHr {
+    width: 230px;      /* Set the width of the <hr> */
+    text-align: left;  /* Align text to the left */
+    margin-left: 0;    /* Remove any left margin */
+    margin-right: auto; /* Allow right margin to auto for centering */
+    border: none;      /* Remove default border style (optional) */
+    border-top: 1px solid #000; /* Customize border style and color */
+    display: block;    /* Ensure it behaves as a block element */
+}
+
+.output-section {
+    display: none;  /* Hide the output section by default */
+}
+
+#resetButton {
+    display: none;  /* Hide the reset button by default */
+}
+
+#compoundingToggle {
+  /* Make it bigger */
+  transform: scale(1.2);
+  position: relative;
+  top: 1px;
+}
+
+.toggle-container {
+  position: relative;
+  top: 10px ;
+  margin-top: -5px;
+}
+
+.refreshMessage {
+  margin-top: 25px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 10px;
+}
